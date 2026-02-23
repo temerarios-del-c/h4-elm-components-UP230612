@@ -4,13 +4,6 @@ import Html exposing (Html, a, div, h1, h2, h3, h4, h5, h6, text)
 import Html.Attributes exposing (href)
 
 
-
--- Puedes usar una definición como la siguiente para probar y visualizar tus resultados, solo debes definir "headers" y "hyperlink"
---main : Html.Html msg
---main =
---    Html.div [] [ headers "Titulos", hyperlink "https://upa.edu.mx" "My School" ]
-
-
 joinWords : String -> String -> String
 joinWords word1 word2 =
     word1 ++ word2
@@ -21,8 +14,8 @@ isUpperChars list =
     List.map Char.isUpper list
 
 
-evalChars : (Char -> Bool) -> List Char -> List Bool
-evalChars funTrans list =
+evalChars : List Char -> (Char -> Bool) -> List Bool
+evalChars list funTrans =
     List.map funTrans list
 
 
